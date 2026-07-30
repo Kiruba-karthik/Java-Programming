@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="rank 2"/>
+        <attribute name="authors" value="New"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-30 08:55:47 AM"/>
+        <attribute name="created" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDg6NDE6MzUgQU07MTk0OA=="/>
+        <attribute name="edited" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDg6NTU6NDcgQU07MTsyMDY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="rank" type="Integer" array="False" size=""/>
+            <declare name="marks" type="Integer" array="True" size="100"/>
+            <output expression="&quot;Enter Number of Students:&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter Mark:&quot;" newline="True"/>
+                <input variable="marks[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="rank" expression="1"/>
+                <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="marks[j] &gt; marks[i]">
+                        <then>
+                            <assign variable="rank" expression="rank + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;Rank = &quot;" newline="True"/>
+                <output expression="rank" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

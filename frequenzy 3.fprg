@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="frequenzy 3"/>
+        <attribute name="authors" value="New"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-30 09:03:50 AM"/>
+        <attribute name="created" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDg6NTU6NTQgQU07MTk1NA=="/>
+        <attribute name="edited" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDk6MDM6NTAgQU07MTsyMDUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="target" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="arr" type="Integer" array="True" size="100"/>
+            <output expression="&quot;Enter Size:&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter Number:&quot;" newline="True"/>
+                <input variable="arr[i]"/>
+            </for>
+            <output expression="&quot;Enter Target:&quot;" newline="True"/>
+            <input variable="target"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="arr[i] = target">
+                    <then>
+                        <assign variable="count" expression="count + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Frequency = &quot;" newline="True"/>
+            <output expression="count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="heart rate"/>
+        <attribute name="authors" value="New"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-30 08:33:34 AM"/>
+        <attribute name="created" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDg6MTU6MDcgQU07MTk0OA=="/>
+        <attribute name="edited" value="TmV3O1NPTklDOzIwMjYtMDctMzA7MDg6MzM6MzQgQU07MTsyMDU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="pulse" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter age: &quot;" newline="True"/>
+            <input variable="age"/>
+            <output expression="&quot;enter pulse :&quot;" newline="True"/>
+            <input variable="pulse"/>
+            <if expression="age &lt; 18">
+                <then>
+                    <if expression="pulse &gt;= 70 And pulse &lt;= 120">
+                        <then>
+                            <output expression="&quot;normal&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;abnormal&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="pulse &gt;= 60 And pulse &lt;= 100">
+                        <then>
+                            <output expression="&quot;normal&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;abnormal&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
